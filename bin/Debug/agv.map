@@ -1,0 +1,813 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o (exit)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+                              obj\Debug\main.o (__umulhisi3)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                              obj\Debug\main.o (__ltsf2)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                              obj\Debug\main.o (__divsf3)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o) (__divsf3x)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                              obj\Debug\main.o (__fixunssfsi)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o) (__fp_cmp)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o) (__fp_inf)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o) (__fp_nan)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o) (__fp_pscA)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o) (__fp_pscB)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o) (__fp_round)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o) (__fp_split3)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o) (__fp_zero)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                              obj\Debug\main.o (__gtsf2)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                              obj\Debug\main.o (__mulsf3)
+c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o) (__mulsf3x)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000100000 xr
+data             0x0000000000800200 0x000000000000fe00 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+LOAD obj\Debug\fuse.o
+LOAD obj\Debug\h_bridge.o
+LOAD obj\Debug\main.o
+START GROUP
+LOAD c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a
+LOAD c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a
+LOAD c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libc.a
+LOAD c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libatmega2560.a
+END GROUP
+                0x0000000000100000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                0x000000000000fe00                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xfe00
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x1378
+ *(.vectors)
+ .vectors       0x0000000000000000       0xe4 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+                0x0000000000000000                __vector_default
+                0x0000000000000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x00000000000000e4                . = ALIGN (0x2)
+                0x00000000000000e4                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000000000000e4        0x0 linker stubs
+ *(.trampolines*)
+                0x00000000000000e4                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem.*)
+                0x00000000000000e4                . = ALIGN (0x2)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000000000000e4                __ctors_start = .
+ *(.ctors)
+                0x00000000000000e4                __ctors_end = .
+                0x00000000000000e4                __dtors_start = .
+ *(.dtors)
+                0x00000000000000e4                __dtors_end = .
+ SORT_BY_NAME(*)(.ctors)
+ SORT_BY_NAME(*)(.dtors)
+ *(.init0)
+ .init0         0x00000000000000e4        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+                0x00000000000000e4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000000000000e4       0x10 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000f4        0x8 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000fc        0x4 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+                0x00000000000000fc                __vector_38
+                0x00000000000000fc                __vector_22
+                0x00000000000000fc                __vector_28
+                0x00000000000000fc                __vector_1
+                0x00000000000000fc                __vector_32
+                0x00000000000000fc                __vector_34
+                0x00000000000000fc                __vector_24
+                0x00000000000000fc                __vector_12
+                0x00000000000000fc                __vector_55
+                0x00000000000000fc                __vector_46
+                0x00000000000000fc                __bad_interrupt
+                0x00000000000000fc                __vector_6
+                0x00000000000000fc                __vector_31
+                0x00000000000000fc                __vector_35
+                0x00000000000000fc                __vector_39
+                0x00000000000000fc                __vector_3
+                0x00000000000000fc                __vector_23
+                0x00000000000000fc                __vector_30
+                0x00000000000000fc                __vector_45
+                0x00000000000000fc                __vector_25
+                0x00000000000000fc                __vector_11
+                0x00000000000000fc                __vector_54
+                0x00000000000000fc                __vector_13
+                0x00000000000000fc                __vector_17
+                0x00000000000000fc                __vector_19
+                0x00000000000000fc                __vector_56
+                0x00000000000000fc                __vector_7
+                0x00000000000000fc                __vector_49
+                0x00000000000000fc                __vector_41
+                0x00000000000000fc                __vector_43
+                0x00000000000000fc                __vector_27
+                0x00000000000000fc                __vector_5
+                0x00000000000000fc                __vector_33
+                0x00000000000000fc                __vector_47
+                0x00000000000000fc                __vector_52
+                0x00000000000000fc                __vector_37
+                0x00000000000000fc                __vector_4
+                0x00000000000000fc                __vector_44
+                0x00000000000000fc                __vector_51
+                0x00000000000000fc                __vector_9
+                0x00000000000000fc                __vector_2
+                0x00000000000000fc                __vector_21
+                0x00000000000000fc                __vector_15
+                0x00000000000000fc                __vector_36
+                0x00000000000000fc                __vector_29
+                0x00000000000000fc                __vector_40
+                0x00000000000000fc                __vector_8
+                0x00000000000000fc                __vector_26
+                0x00000000000000fc                __vector_48
+                0x00000000000000fc                __vector_14
+                0x00000000000000fc                __vector_53
+                0x00000000000000fc                __vector_10
+                0x00000000000000fc                __vector_50
+                0x00000000000000fc                __vector_16
+                0x00000000000000fc                __vector_18
+                0x00000000000000fc                __vector_20
+                0x00000000000000fc                __vector_42
+ .text          0x0000000000000100        0x0 obj\Debug\fuse.o
+ .text          0x0000000000000100      0x262 obj\Debug\h_bridge.o
+                0x0000000000000100                init_motors
+                0x00000000000001c4                set_motor_speed
+                0x0000000000000208                set_motor_direction
+                0x00000000000002d2                bocht_naar_rechts
+                0x00000000000002f2                bocht_naar_links
+                0x0000000000000312                rechtvooruit
+                0x0000000000000342                stoppen
+ .text          0x0000000000000362      0xcda obj\Debug\main.o
+                0x000000000000041c                init_ultrasonic
+                0x0000000000000462                measure_distance
+                0x00000000000007c2                init
+                0x000000000000084e                main
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .text          0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                0x000000000000103c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc.mul
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc   0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x000000000000103c        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x000000000000103c       0x1e c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+                0x000000000000103c                __umulhisi3
+ .text.libgcc.div
+                0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x000000000000105a        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .text.avr-libc.fplib
+                0x000000000000105a        0xa c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                0x000000000000105a                __nesf2
+                0x000000000000105a                __eqsf2
+                0x000000000000105a                __cmpsf2
+                0x000000000000105a                __ltsf2
+                0x000000000000105a                __lesf2
+ .text.avr-libc.fplib
+                0x0000000000001064        0x8 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                0x0000000000001064                __divsf3
+ .text.avr-libc.fplib
+                0x000000000000106c       0xdc c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                0x000000000000108c                __divsf3x
+                0x0000000000001092                __divsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000001148       0x5e c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                0x0000000000001148                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00000000000011a6       0x48 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                0x00000000000011a6                __fp_cmp
+ .text.avr-libc.fplib
+                0x00000000000011ee        0xc c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                0x00000000000011ee                __fp_inf
+ .text.avr-libc.fplib
+                0x00000000000011fa        0x6 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                0x00000000000011fa                __fp_nan
+ .text.avr-libc.fplib
+                0x0000000000001200        0xe c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                0x0000000000001200                __fp_pscA
+ .text.avr-libc.fplib
+                0x000000000000120e        0xe c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                0x000000000000120e                __fp_pscB
+ .text.avr-libc.fplib
+                0x000000000000121c       0x22 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                0x000000000000121c                __fp_round
+ .text.avr-libc.fplib
+                0x000000000000123e       0x44 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                0x000000000000123e                __fp_split3
+                0x000000000000124e                __fp_splitA
+ .text.avr-libc.fplib
+                0x0000000000001282        0xe c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                0x0000000000001282                __fp_zero
+                0x0000000000001284                __fp_szero
+ .text.avr-libc.fplib
+                0x0000000000001290        0xa c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                0x0000000000001290                __gesf2
+                0x0000000000001290                __gtsf2
+ .text.avr-libc.fplib
+                0x000000000000129a        0x8 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                0x000000000000129a                __mulsf3
+ .text.avr-libc.fplib
+                0x00000000000012a2       0xd2 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                0x00000000000012c0                __mulsf3x
+                0x00000000000012c6                __mulsf3_pse
+                0x0000000000001374                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000001374        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+                0x0000000000001374                _exit
+                0x0000000000001374                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000001374        0x4 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ *(.fini0)
+ *(.hightext)
+ *(.hightext*)
+ *(.progmemx.*)
+                0x0000000000001378                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+                0x0000000000001378                _etext = .
+
+.data           0x0000000000800200        0x0 load address 0x0000000000001378
+                [!provide]                        PROVIDE (__data_start = .)
+ *(.data)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .data          0x0000000000800200        0x0 obj\Debug\fuse.o
+ .data          0x0000000000800200        0x0 obj\Debug\h_bridge.o
+ .data          0x0000000000800200        0x0 obj\Debug\main.o
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .data          0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.r*)
+                0x0000000000800200                . = ALIGN (0x2)
+                0x0000000000800200                _edata = .
+                [!provide]                        PROVIDE (__data_end = .)
+
+.bss            0x0000000000800200        0x0
+                [!provide]                        PROVIDE (__bss_start = .)
+ *(.bss)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .bss           0x0000000000800200        0x0 obj\Debug\fuse.o
+ .bss           0x0000000000800200        0x0 obj\Debug\h_bridge.o
+ .bss           0x0000000000800200        0x0 obj\Debug\main.o
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .bss           0x0000000000800200        0x0 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ *(.bss*)
+ *(COMMON)
+                [!provide]                        PROVIDE (__bss_end = .)
+                0x0000000000001378                __data_load_start = LOADADDR (.data)
+                0x0000000000001378                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800200        0x0
+                [!provide]                        PROVIDE (__noinit_start = .)
+ *(.noinit .noinit.* .gnu.linkonce.n.*)
+                [!provide]                        PROVIDE (__noinit_end = .)
+                0x0000000000800200                _end = .
+                [!provide]                        PROVIDE (__heap_start = .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse           0x0000000000820000        0x3
+ *(.fuse)
+ .fuse          0x0000000000820000        0x3 obj\Debug\fuse.o
+                0x0000000000820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x12
+ *(.comment)
+ .comment       0x0000000000000000       0x12 obj\Debug\fuse.o
+                                         0x13 (size before relaxing)
+ .comment       0x0000000000000012       0x13 obj\Debug\h_bridge.o
+ .comment       0x0000000000000012       0x13 obj\Debug\main.o
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x98
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x18 obj\Debug\fuse.o
+ .debug_aranges
+                0x0000000000000018       0x20 obj\Debug\h_bridge.o
+ .debug_aranges
+                0x0000000000000038       0x20 obj\Debug\main.o
+ .debug_aranges
+                0x0000000000000058       0x20 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .debug_aranges
+                0x0000000000000078       0x20 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x137c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0xbbc c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_info    0x0000000000000bbc       0xa2 obj\Debug\fuse.o
+ .debug_info    0x0000000000000c5e      0x127 obj\Debug\h_bridge.o
+ .debug_info    0x0000000000000d85      0x5af obj\Debug\main.o
+ .debug_info    0x0000000000001334       0x24 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .debug_info    0x0000000000001358       0x24 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_abbrev   0x0000000000000000      0xe55
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0xb1a c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_abbrev  0x0000000000000b1a       0x7b obj\Debug\fuse.o
+ .debug_abbrev  0x0000000000000b95       0x9c obj\Debug\h_bridge.o
+ .debug_abbrev  0x0000000000000c31      0x1fc obj\Debug\main.o
+ .debug_abbrev  0x0000000000000e2d       0x14 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .debug_abbrev  0x0000000000000e41       0x14 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_line     0x0000000000000000      0xb62
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1d c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_line    0x000000000000001d       0x3f obj\Debug\fuse.o
+ .debug_line    0x000000000000005c      0x2b5 obj\Debug\h_bridge.o
+ .debug_line    0x0000000000000311      0x761 obj\Debug\main.o
+ .debug_line    0x0000000000000a72       0x51 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .debug_line    0x0000000000000ac3       0x9f c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_frame    0x0000000000000000      0x274
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0xf4 obj\Debug\h_bridge.o
+ .debug_frame   0x00000000000000f4      0x180 obj\Debug\main.o
+
+.debug_str      0x0000000000000000      0x659
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x3e9 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_str     0x00000000000003e9       0xa5 obj\Debug\fuse.o
+                                         0xd9 (size before relaxing)
+ .debug_str     0x000000000000048e       0x7f obj\Debug\h_bridge.o
+                                        0x14a (size before relaxing)
+ .debug_str     0x000000000000050d       0xed obj\Debug\main.o
+                                        0x206 (size before relaxing)
+ .debug_str     0x00000000000005fa       0x5f c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+ .debug_str     0x0000000000000659       0x5f c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+                0x0000000000000000      0x1b2
+ *(.debug_line_str)
+ .debug_line_str
+                0x0000000000000000       0x89 obj\Debug\fuse.o
+                                         0xce (size before relaxing)
+ .debug_line_str
+                0x0000000000000089       0x54 obj\Debug\h_bridge.o
+                                         0xd8 (size before relaxing)
+ .debug_line_str
+                0x00000000000000dd       0x82 obj\Debug\main.o
+                                        0x147 (size before relaxing)
+ .debug_line_str
+                0x000000000000015f       0x53 c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+                                         0x5f (size before relaxing)
+ .debug_line_str
+                0x00000000000001b2       0x5f c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+
+.debug_loclists
+ *(.debug_loclists)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+ *(.debug_rnglists)
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+OUTPUT(bin\Debug\agv.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__FUSE_REGION_LENGTH__                            c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__bad_interrupt                                   c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__cmpsf2                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__divsf3                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                                                  obj\Debug\main.o
+__divsf3_pse                                      c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__divsf3x                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+__eqsf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__fixunssfsi                                      c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                                                  obj\Debug\main.o
+__fp_cmp                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__fp_inf                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_nan                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_pscA                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_pscB                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_round                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+__fp_split3                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_splitA                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+__fp_szero                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_zero                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+__fuse                                            obj\Debug\fuse.o
+__gesf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+__gtsf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                                                  obj\Debug\main.o
+__heap_end                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__init                                            c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__lesf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__ltsf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                                                  obj\Debug\main.o
+__mulsf3                                          c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                                                  obj\Debug\main.o
+__mulsf3_pse                                      c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+__mulsf3x                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+__nesf2                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__stack                                           c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__umulhisi3                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_umulhisi3.o)
+                                                  obj\Debug\main.o
+__vector_1                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_10                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_11                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_12                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_13                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_14                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_15                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_16                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_17                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_18                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_19                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_2                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_20                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_21                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_22                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_23                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_24                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_25                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_26                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_27                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_28                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_29                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_3                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_30                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_31                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_32                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_33                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_34                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_35                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_36                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_37                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_38                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_39                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_4                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_40                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_41                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_42                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_43                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_44                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_45                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_46                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_47                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_48                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_49                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_5                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_50                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_51                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_52                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_53                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_54                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_55                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_56                                       c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_6                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_7                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_8                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_9                                        c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vector_default                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+__vectors                                         c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+_exit                                             c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+bocht_naar_links                                  obj\Debug\h_bridge.o
+                                                  obj\Debug\main.o
+bocht_naar_rechts                                 obj\Debug\h_bridge.o
+                                                  obj\Debug\main.o
+exit                                              c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/avr6\libgcc.a(_exit.o)
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+init                                              obj\Debug\main.o
+init_motors                                       obj\Debug\h_bridge.o
+                                                  obj\Debug\main.o
+init_ultrasonic                                   obj\Debug\main.o
+main                                              obj\Debug\main.o
+                                                  c:/users/youss/downloads/avr-gcc-12.1.0-x64-windows/bin/../lib/gcc/avr/12.1.0/../../../../avr/lib/avr6/crtatmega2560.o
+measure_distance                                  obj\Debug\main.o
+rechtvooruit                                      obj\Debug\h_bridge.o
+                                                  obj\Debug\main.o
+set_motor_direction                               obj\Debug\h_bridge.o
+set_motor_speed                                   obj\Debug\h_bridge.o
+stoppen                                           obj\Debug\h_bridge.o
+                                                  obj\Debug\main.o

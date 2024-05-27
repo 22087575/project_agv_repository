@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1716375200 source:d:\youssef\school\hhs\project\project agv\code agv\agv\fuse.c
+	<avr/io.h>
+
+1716422423 source:d:\youssef\school\hhs\project\project agv\code agv\agv\h_bridge.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	"h_bridge.h"
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+
+1716420402 d:\youssef\school\hhs\project\project agv\code agv\agv\h_bridge.h
+
+1716422442 source:d:\youssef\school\hhs\project\project agv\code agv\agv\main.c
+	<avr/io.h>
+	<util/delay.h>
+	"h_bridge.h"
+	"buzzer.h"
+	"buzzer.c"
+	"ultrasone.c"
+	"ultrasone.h"
+
+1716404351 source:d:\youssef\school\hhs\project\project agv\code agv\agv\buzzer c.c
+	<avr/io.h>
+
+1716406343 d:\youssef\school\hhs\project\project agv\code agv\agv\buzzer.h
+	<avr/io.h>
+
+1716404744 d:\youssef\school\hhs\project\project agv\code agv\agv\buzzer.c
+	"buzzer.h"
+	<avr/io.h>
+	<avr/interrupt.h>
+
+1716419809 d:\youssef\school\hhs\project\project agv\code agv\agv\ultrasone.c
+	"ultrasone.h"
+	<avr/io.h>
+	<avr/interrupt.h>
+	<avr/io.h>
+	<util/delay.h>
+
+1716418192 d:\youssef\school\hhs\project\project agv\code agv\agv\ultrasone.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	<inttypes.h>
+	<util/delay.h>
+
