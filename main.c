@@ -124,7 +124,7 @@ int main(void) {
                 agv_rechts_correctie();
                 _delay_ms(100);
             }
-            if (distancelat > 17 && distancelat < 30) {
+            if (distancelat > 17) {
                 agv_links_correctie();
                 _delay_ms(100);
             }
