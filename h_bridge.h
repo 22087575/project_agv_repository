@@ -1,3 +1,7 @@
+/*
+ * h_bridge.h - XvR 2020
+ */
+
 #ifndef _H_BRIDGE_H_
 #define _H_BRIDGE_H_
 
@@ -11,7 +15,6 @@
 #define IN4 PB0
 #define EN_A PH6 // OC2B
 #define EN_B PE3 // OC3A
-
 // Button pins
 #define S1 PF1
 #define S2 PF2
@@ -26,6 +29,7 @@
 #define D4 PB4
 #define DDR_LEDS DDRB
 #define PORT_LEDS PORTB
+
 void initm(void);
 void set_motor_direction(uint8_t motor, uint8_t direction);
 void set_motor_speed(uint8_t motor, uint8_t speed);

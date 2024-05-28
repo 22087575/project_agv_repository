@@ -11,20 +11,9 @@
  // S2 = A2 = PF2
  // S3 = A3 = PF3
 
- #define D1 PB7
- #define D2 PB6
- #define D3 PB5
- #define D4 PB4
- #define DDR_LEDS DDRB
-#define PORT_LEDS PORTB
 
- #define S1 PF1
- #define S2 PF2
- #define S3 PF3
- #define DDR_BUTTONS DDRF
- #define PIN_BUTTONS PINF
 
- #define buzzer PE5
+ #define BUZZER_PIN PB5
  #define DDR_buzzer DDRE
 
  // T = 1.5 s -> gebruik timer om 0.75 s af te wachten:

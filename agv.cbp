@@ -52,11 +52,8 @@
 		</ExtraCommands>
 		<Unit filename="buzzer.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="buzzer.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="buzzer.h" />
 		<Unit filename="fuse.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -64,14 +61,22 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="h_bridge.h" />
+		<Unit filename="infrared.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="infrared.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ultrasone.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ultrasone.h" />
+		<Unit filename="ultrasone2.c">
+			<Option compilerVar="CC" />
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="ultrasone.h">
+		<Unit filename="ultrasone2.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>

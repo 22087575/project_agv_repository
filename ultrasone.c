@@ -44,3 +44,45 @@ uint16_t measure_distance(void) {
 
     return distance;
 }
+// Initialiseer de ultrasonische sensor
+void init_ultrasoniclat(void) {
+    // Stel de trigger pin in als uitgang
+    DDRJ |= (1 << TRIGl_PIN);
+    // Stel de echo pin in als ingang
+    DDRJ &= ~(1 << ECHOl_PIN);
+    // Zet de trigger pin laag
+    PORTJ &= ~(1 << TRIGl_PIN);
+}
+
+// Meet de afstand met de ultrasonische sensor
+uint16_t measure_distancelat(void) {
+    uint16_t duration;
+
+    // Stuur een trigger puls van 10 microseconden
+    PORTJ |= (1 << TRIGl_PIN);
+    _delay_us(10);
+    PORTJ &= ~(1 << TRIGl_PIN);
+
+    // Wacht tot de echo pin hoog wordt
+    while (!(PINJ & (1 << ECHOl_PIN)));
+
+    // Start de timer
+    TCNT5 = 0;
+    TCCR5B |= (1 << CS51); // Prescaler van 8
+    while (PINJ & (1 << ECHOl_PIN)) {
+        // Controleer of de timer te lang loopt om een te grote afstand te voorkomen
+        if (TCNT5 > 60000) {
+            break;
+        }
+    }
+    // Stop de timer
+    TCCR5B &= ~(1 << CS51);
+
+    // Lees de timer waarde
+    duration = TCNT5;
+
+    // Converteer de duur naar afstand in centimeters
+    uint16_t distancelat = duration / 58;
+
+    return distancelat;
+}
