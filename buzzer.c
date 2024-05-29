@@ -23,7 +23,7 @@ void buzzer_toggle(void) {
     PORTB ^= (1 << BUZZER_PIN);
 }
 
-void init_timer(void) {
+void init_timer_buzzer(void) {
     TCCR4A = 0;
     TCCR4B = (1 << CS42) | (0 << CS41) | (0 << CS40);
     TCNT4 = 0;  // Reset timer

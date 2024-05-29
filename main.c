@@ -26,6 +26,7 @@ void init(void) {
     init_motors();
     init_infrared();
     init_ultrasoniclat();
+    init_timer_buzzer();
 
     // Initialize External Interrupt for emergency stop
     EICRA |= (1 << ISC01); // Falling edge on INT0
@@ -133,11 +134,16 @@ int main(void) {
 
             if (distance < 30 && distance > 15) {
                 for (int i = 0; i < 2; i++) {
-                    buzzer_toggle();
-                    _delay_ms(100);
+                        if (TIFR4 & (1<<TOV4))
+                        {
+                            TCNT4 = TCNT_INIT;
+                            TIFR4 = (1 << TOV4);
+                            buzzer_toggle();
+
+                        }
 
                 }
-                buzzer_uit();
+
 
             }
         }

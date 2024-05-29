@@ -31,5 +31,5 @@
  void buzzer_aan(void);
  void buzzer_uit(void);
  void buzzer_toggle(void);
-  void init_timer(void);
+  void init_timer_buzzer(void);
 #endif // BUZZER_H_INCLUDED#ifndef BUZZER_H_INCLUDED
