@@ -26,10 +26,10 @@
 #define TRIG_PIN PH0
 #define ECHO_PIN PH1
 void init_ultrasonic(void);
-uint16_t measure_distance(void);
+float measure_distance(void);
 			// Return the distance in centimeters
 
 
 void init_ultrasoniclat(void);
-uint16_t measure_distancelat(void);
+float measure_distancelat(void);
 #endif // ULTRASONETEST_H_INCLUDED

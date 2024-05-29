@@ -13,7 +13,7 @@ void init_ultrasonic(void) {
 }
 
 // Meet de afstand met de ultrasonische sensor
-uint16_t measure_distance(void) {
+float measure_distance(void) {
     uint16_t duration;
 
     // Stuur een trigger puls van 10 microseconden
@@ -23,10 +23,11 @@ uint16_t measure_distance(void) {
 
     // Wacht tot de echo pin hoog wordt
     while (!(PINH & (1 << ECHO_PIN)));
-
+{
     // Start de timer
     TCNT1 = 0;
     TCCR1B |= (1 << CS11); // Prescaler van 8
+}
     while (PINH & (1 << ECHO_PIN)) {
         // Controleer of de timer te lang loopt om een te grote afstand te voorkomen
         if (TCNT1 > 60000) {
@@ -40,9 +41,10 @@ uint16_t measure_distance(void) {
     duration = TCNT1;
 
     // Converteer de duur naar afstand in centimeters
-    uint16_t distance = duration / 58;
+    float distance = duration / 58 / 2;
 
     return distance;
+
 }
 // Initialiseer de ultrasonische sensor
 void init_ultrasoniclat(void) {
@@ -55,7 +57,7 @@ void init_ultrasoniclat(void) {
 }
 
 // Meet de afstand met de ultrasonische sensor
-uint16_t measure_distancelat(void) {
+float measure_distancelat(void) {
     uint16_t duration;
 
     // Stuur een trigger puls van 10 microseconden
@@ -82,7 +84,7 @@ uint16_t measure_distancelat(void) {
     duration = TCNT5;
 
     // Converteer de duur naar afstand in centimeters
-    uint16_t distancelat = duration / 58;
+    float distancelat = duration / 58 / 2;
 
     return distancelat;
 }

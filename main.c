@@ -13,6 +13,7 @@ volatile uint8_t emergency_stop_flag = 0;
 volatile uint8_t infrared_detected_flag = 0;
 volatile uint8_t cool_down_flag = 0;
 volatile uint16_t cool_down_counter = 0;
+volatile uint8_t obstacle_detected_flag = 0;
 
 static int lat_detectie(void) { return ((PIN_BUTTONS & (1 << S1)) == 0); }
 static int lat_detectie2(void) { return ((PIN_BUTTONS & (1 << S2)) == 0); }
@@ -73,6 +74,11 @@ ISR(TIMER0_COMPA_vect) {
             cool_down_count = 0;
         }
     }
+
+    if (obstacle_detected_flag) {
+        obstacle_detected_flag = 0;
+
+    }
 }
 
 int main(void) {
@@ -97,8 +103,8 @@ int main(void) {
         if (distance < 15) {
             agv_stoppen();
             buzzer_uit();  // Ensure buzzer is off
-            _delay_ms(100);
-        } else {
+            obstacle_detected_flag = 1;
+        } else if (!obstacle_detected_flag) {
             if (infrared_detect() && !cool_down_flag && !infrared_detected_flag) {
                 agv_stoppen();
                 infrared_detected_flag = 1;
@@ -126,15 +132,15 @@ int main(void) {
             }
 
             if (distance < 30 && distance > 15) {
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 2; i++) {
                     buzzer_toggle();
                     _delay_ms(100);
+
                 }
                 buzzer_uit();
-                _delay_ms(100);
+
             }
         }
     }
     return 0;
 }
-

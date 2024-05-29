@@ -1,12 +1,11 @@
+#ifndef INFRARED_H_
+#define INFRARED_H_
+
 #include <avr/io.h>
-#include "infrared.h"
 
-void init_infrared(void)
-{
-    DDRF &= ~(1 << INFRARED_PIN); // Set as input
-}
+#define INFRARED_PIN PF5
 
-int infrared_detect(void)
-{
-    return (PINF & (1 << INFRARED_PIN)) == 0;
-}
+void init_infrared(void);
+int infrared_detect(void);
+
+#endif // INFRARED_H_

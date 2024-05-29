@@ -30,4 +30,3 @@ float PIDController_Update(PIDController* pid, float measured_value) {
 
     return pid->output;
 }
-

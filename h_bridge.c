@@ -12,13 +12,13 @@ void agv_rechtdoor(void)
 void agv_rechts_bocht(void)
 {
     set_motor_speed(1, 255);
-    set_motor_speed(2, 150);
+    set_motor_speed(2, 0);
     _delay_ms(100);
 }
 
 void agv_links_bocht(void)
 {
-    set_motor_speed(1, 150);
+    set_motor_speed(1, 0);
     set_motor_speed(2, 255);
     _delay_ms(100);
 }
