@@ -1,13 +1,13 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#ifndef F_CPU
-#define F_CPU 16000000ul
-#endif
+#include <util/delay.h>
 #include "h_bridge.h"
 #include "buzzer.h"
 #include "ultrasone.h"
 #include "infrared.h"
-/*#include "ultrasonelat.h"*/
+#include "PID.h"
+
+// Your previous AGV-related code here...
 
 volatile uint8_t emergency_stop_flag = 0;
 volatile uint8_t infrared_detected_flag = 0;
@@ -80,12 +80,17 @@ int main(void) {
     uint16_t distance;
     uint16_t distancelat;
 
-    if (emergency_stop_flag) {
-        agv_stoppen();
-        while (1); // Stay here indefinitely for emergency stop
-    }
+    // PID configuration
+    PIDController lat_pid;
+    PIDController_Init(&lat_pid, 2.0f, 0.1f, 0.01f, -255.0f, 255.0f);
+    lat_pid.setpoint = 5.0f; // Desired lateral distance in cm
 
     while (1) {
+        if (emergency_stop_flag) {
+            agv_stoppen();
+            while (1); // Stay here indefinitely for emergency stop
+        }
+
         distance = measure_distance();
         distancelat = measure_distancelat();
 
@@ -94,20 +99,32 @@ int main(void) {
             buzzer_uit();  // Ensure buzzer is off
             _delay_ms(100);
         } else {
-            if (lat_detectie()) {
-                agv_rechts_bocht();
-                _delay_ms(100);
-            } else if (lat_detectie2()) {
-                agv_links_bocht();
-                _delay_ms(100);
-            } else if (infrared_detect() && !cool_down_flag && !infrared_detected_flag) {
+            if (infrared_detect() && !cool_down_flag && !infrared_detected_flag) {
                 agv_stoppen();
                 infrared_detected_flag = 1;
                 TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0
             } else if (!infrared_detected_flag) {
-                agv_rechtdoor();
+                // PID control for lateral distance
+                float correction = PIDController_Update(&lat_pid, (float)distancelat);
+
+                // Calculate motor speeds based on correction
+                int16_t base_speed = 200;
+                int16_t left_motor_speed = base_speed - (int16_t)correction;
+                int16_t right_motor_speed = base_speed + (int16_t)correction;
+
+                // Constrain motor speeds to valid range
+                if (left_motor_speed < 0) left_motor_speed = 0;
+                if (left_motor_speed > 255) left_motor_speed = 255;
+                if (right_motor_speed < 0) right_motor_speed = 0;
+                if (right_motor_speed > 255) right_motor_speed = 255;
+
+                // Set motor speeds
+                set_motor_speed(1, (uint8_t)left_motor_speed);
+                set_motor_speed(2, (uint8_t)right_motor_speed);
+
                 buzzer_uit();
             }
+
             if (distance < 30 && distance > 15) {
                 for (int i = 0; i < 10; i++) {
                     buzzer_toggle();
@@ -116,19 +133,8 @@ int main(void) {
                 buzzer_uit();
                 _delay_ms(100);
             }
-            if (distancelat > 50) {
-                agv_links_bocht();
-                _delay_ms(100);
-            }
-            if (distancelat < 13) {
-                agv_rechts_correctie();
-                _delay_ms(100);
-            }
-            if (distancelat > 17) {
-                agv_links_correctie();
-                _delay_ms(100);
-            }
         }
     }
     return 0;
 }
+
