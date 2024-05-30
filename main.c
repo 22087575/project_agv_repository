@@ -7,20 +7,20 @@
 #include "infrared.h"
 #include "PID.h"
 
-// Your previous AGV-related code here...
-
+// Flags and variables
 volatile uint8_t emergency_stop_flag = 0;
 volatile uint8_t infrared_detected_flag = 0;
 volatile uint8_t cool_down_flag = 0;
 volatile uint16_t cool_down_counter = 0;
 volatile uint8_t obstacle_detected_flag = 0;
 
+// Button detection functions
 static int lat_detectie(void) { return ((PIN_BUTTONS & (1 << S1)) == 0); }
 static int lat_detectie2(void) { return ((PIN_BUTTONS & (1 << S2)) == 0); }
 static int boom_detectie(void) { return ((PIN_BUTTONS & (1 << S3)) == 0); }
 
 void init(void) {
-    // Initialize H-bridge, set motor pins as output
+    // Initialize peripherals
     init_ultrasonic();
     initm();
     init_motors();
@@ -78,7 +78,6 @@ ISR(TIMER0_COMPA_vect) {
 
     if (obstacle_detected_flag) {
         obstacle_detected_flag = 0;
-
     }
 }
 
@@ -120,10 +119,8 @@ int main(void) {
                 int16_t right_motor_speed = base_speed + (int16_t)correction;
 
                 // Constrain motor speeds to valid range
-                if (left_motor_speed < 0) left_motor_speed = 0;
-                if (left_motor_speed > 255) left_motor_speed = 255;
-                if (right_motor_speed < 0) right_motor_speed = 0;
-                if (right_motor_speed > 255) right_motor_speed = 255;
+                left_motor_speed = (left_motor_speed < 0) ? 0 : (left_motor_speed > 255) ? 255 : left_motor_speed;
+                right_motor_speed = (right_motor_speed < 0) ? 0 : (right_motor_speed > 255) ? 255 : right_motor_speed;
 
                 // Set motor speeds
                 set_motor_speed(1, (uint8_t)left_motor_speed);
@@ -134,17 +131,12 @@ int main(void) {
 
             if (distance < 30 && distance > 15) {
                 for (int i = 0; i < 2; i++) {
-                        if (TIFR4 & (1<<TOV4))
-                        {
-                            TCNT4 = TCNT_INIT;
-                            TIFR4 = (1 << TOV4);
-                            buzzer_toggle();
-
-                        }
-
+                    if (TIFR4 & (1 << TOV4)) {
+                        TCNT4 = TCNT_INIT;
+                        TIFR4 = (1 << TOV4);
+                        buzzer_toggle();
+                    }
                 }
-
-
             }
         }
     }
