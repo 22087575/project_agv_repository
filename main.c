@@ -38,7 +38,7 @@ void init(void) {
     OCR0A = 156; // 10ms interval (16000000/1024/100)
     TIMSK0 |= (1 << OCIE0A); // Enable Timer0 compare match A interrupt
 
-    sei(); // Enable global interrupts
+    sei(); // Set 'enable global interrupts' flag
 
     init_buzzer(); // Initialize the buzzer
     buzzer_uit();  // Ensure the buzzer is off
