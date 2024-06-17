@@ -14,7 +14,7 @@
 
 
  #define BUZZER_PIN PB5
- #define DDR_buzzer DDRE
+ #define DDR_buzzer DDRB
 
  // T = 1.5 s -> gebruik timer om 0.75 s af te wachten:
  // 0.75 * 16000000 = 12000000 cycles

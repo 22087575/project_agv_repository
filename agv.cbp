@@ -76,13 +76,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ultrasone.h" />
-		<Unit filename="ultrasonelat.c">
-			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="ultrasonelat.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

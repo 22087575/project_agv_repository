@@ -1,5 +1,5 @@
-#ifndef ULTRASONE_H_INCLUDED
-#define ULTRASONE_H_INCLUDED
+#ifndef ULTRASONETEST_H_INCLUDED
+#define ULTRASONETEST_H_INCLUDED
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
