@@ -69,7 +69,7 @@ void set_motor_speed(uint8_t motor, uint8_t speed)
         {
             OCR2B = speed;
         }
-    else if (motor == 2)
+    if (motor == 2)
         {
             OCR3A = speed;
         }

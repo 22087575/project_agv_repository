@@ -5,15 +5,15 @@ void init_buzzer(void) {
     // Stel de buzzer pin in als uitgang
     DDRB |= (1 << BUZZER_PIN);
     // Zet de buzzer uit om te beginnen
-    PORTB &= ~(1 << BUZZER_PIN);
-}
-
-void buzzer_uit(void) {
-    // Zet de buzzer pin hoog om de buzzer aan te zetten
     PORTB |= (1 << BUZZER_PIN);
 }
 
 void buzzer_aan(void) {
+    // Zet de buzzer pin hoog om de buzzer aan te zetten
+    PORTB |= (1 << BUZZER_PIN);
+}
+
+void buzzer_uit(void) {
     // Zet de buzzer pin laag om de buzzer uit te zetten
     PORTB &= ~(1 << BUZZER_PIN);
 }

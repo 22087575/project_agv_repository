@@ -22,10 +22,10 @@ volatile uint8_t was_following_line = 0;
 
 void init(void) {
     // Initialize peripherals
-    init_ultrasonics();
     initm();
     init_motors();
     init_infrared();
+    init_ultrasonics();
     init_timer_buzzer();
 
     // Initialize External Interrupt for emergency stop
@@ -46,7 +46,7 @@ void init(void) {
 
 // Emergency stop interrupt service routine
 ISR(INT0_vect) {
-    if ((PIND & (1 << PD2)) == 0) { // Check if the button is pressed (falling edge)
+    if ((PIND & (1 << PD0)) == 0) { // Check if the button is pressed (falling edge)
         emergency_stop_flag = 1;
 
         // Save the current state
@@ -66,15 +66,18 @@ ISR(TIMER0_COMPA_vect) {
 
     if (ultrasonic_detected_flag) {
         tick_count++;
-        if (tick_count % 50 == 0) { // Toggle buzzer every 500ms
+        if (tick_count % 25== 0) { // Toggle buzzer every 500ms
             buzzer_toggle();
+             set_motor_speed(1, 0);
+                set_motor_speed(2, 0);
         }
+        buzzer_aan();
         if (tick_count >= 150) { // 3 seconds
             ultrasonic_detected_flag = 0;
             cool_down_flag = 1;
             tick_count = 0;
             buzzer_uit();
-
+            was_following_line = 1;
         }
     }
 
@@ -83,16 +86,15 @@ ISR(TIMER0_COMPA_vect) {
         if (cool_down_count >= 150) { // Cool-down period of 3 seconds
             cool_down_flag = 0;
             cool_down_count = 0;
-        }
-    }
+        if (was_following_line) {
+                set_motor_speed(1, last_left_motor_speed);
+                set_motor_speed(2, last_right_motor_speed);
+                was_following_line = 0; // Reset the flag
 
-    if (obstacle_detected_flag) {
-        if (measure_distance1() > 15) {
-            obstacle_detected_flag = 0;
+    }
         }
     }
 }
-
 int main(void) {
     init();
     uint16_t distance1, distance2, distance3;
@@ -100,7 +102,7 @@ int main(void) {
     // PID configuration
     PIDController lat_pid;
     PIDController_Init(&lat_pid, 2.0f, 0.1f, 0.01f, -255.0f, 255.0f);
-    lat_pid.setpoint = 5.0f; // Desired lateral distance in cm
+    lat_pid.setpoint = 10.0f; // Desired lateral distance in cm
 
     while (1) {
         if (emergency_stop_flag) {
@@ -125,46 +127,46 @@ int main(void) {
 
         if (distance1 < 15 && !cool_down_flag) {
             agv_stoppen();
-            buzzer_uit();  // Ensure buzzer is off
             ultrasonic_detected_flag = 1;
             TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0
-        } else if (!obstacle_detected_flag) {
-            if (distance3 < 15) {
-                agv_stoppen();
-                buzzer_uit();  // Ensure buzzer is off
-                obstacle_detected_flag = 1;
-            } else {
-                // PID control for lateral distance
-                float correction = PIDController_Update(&lat_pid, (float)distance2);
+        }
 
-                // Calculate motor speeds based on correction
-                int16_t base_speed = 200;
-                int16_t left_motor_speed = base_speed - (int16_t)correction;
-                int16_t right_motor_speed = base_speed + (int16_t)correction;
+        if (distance3 < 15) {
+            agv_stoppen();
+            buzzer_uit();
+        } else {
+            // PID control for lateral distance
+            float correction = PIDController_Update(&lat_pid, (float)distance2);
 
-                // Constrain motor speeds to valid range
-                if (left_motor_speed < 0) left_motor_speed = 0;
-                if (left_motor_speed > 255) left_motor_speed = 255;
-                if (right_motor_speed < 0) right_motor_speed = 0;
-                if (right_motor_speed > 255) right_motor_speed = 255;
+            // Calculate motor speeds based on correction
+            int16_t base_speed = 180;
+            int16_t left_motor_speed = base_speed - (int16_t)correction;
+            int16_t right_motor_speed = base_speed - (int16_t)correction;
 
-                // Set motor speeds
-                set_motor_speed(1, (uint8_t)left_motor_speed);
-                set_motor_speed(2, (uint8_t)right_motor_speed);
+            // Constrain motor speeds to valid range
+            if (left_motor_speed < 0) left_motor_speed = 0;
+            if (left_motor_speed > 200) left_motor_speed = 200;
+            if (right_motor_speed < 0) right_motor_speed = 0;
+            if (right_motor_speed > 200) right_motor_speed = 200;
 
-                buzzer_uit();
-            }
+            // Set motor speeds
+            set_motor_speed(1, (uint8_t)left_motor_speed);
+            set_motor_speed(2, (uint8_t)right_motor_speed);
 
-            if (distance3 < 30 && distance3 > 15) {
-                for (int i = 0; i < 2; i++) {
-                    if (TIFR4 & (1 << TOV4)) {
-                        TCNT4 = TCNT_INIT;
-                        TIFR4 = (1 << TOV4);
-                        buzzer_toggle();
-                    }
+            buzzer_uit();
+        }
+
+        if (distance3 < 30 && distance3 > 15) {
+            for (int i = 0; i < 2; i++) {
+                if (TIFR4 & (1 << TOV4)) {
+                    TCNT4 = TCNT_INIT;
+                    TIFR4 = (1 << TOV4);
+                    buzzer_toggle();
+                    _delay_ms(100);
                 }
             }
         }
     }
+
     return 0;
 }

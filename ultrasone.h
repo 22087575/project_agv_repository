@@ -17,10 +17,14 @@
 #define US3_TRIG_PIN PH4
 #define US3_ECHO_PIN PH5
 
+#define US4_TRIG_PIN PD3
+#define US4_ECHO_PIN PD2
+
 void init_ultrasonics(void);
 float measure_distance1(void);
 float measure_distance2(void);
 float measure_distance3(void);
+float measure_distance4(void);
 
 #endif // ULTRASONETEST_H_INCLUDED
 
