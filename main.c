@@ -1,30 +1,21 @@
-//Dit is een comment van Niels Veltrop
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "h_bridge.h"
 #include "buzzer.h"
-#include "ultrasonetest.h"
+#include "ultrasone.h"
 #include "infrared.h"
 #include "PID.h"
 
 // Flags and variables
-volatile uint8_t emergency_stop_flag = 0;
-volatile uint8_t ultrasonic_detected_flag = 0;
+volatile uint8_t boom_detected_flag = 0;
 volatile uint8_t cool_down_flag = 0;
-volatile uint8_t ultrasonic_detected_flag2 = 0;
-volatile uint8_t cool_down_flag2 = 0;
 volatile uint16_t cool_down_counter = 0;
-volatile uint8_t obstacle_detected_flag = 0;
-
-// Variables to store the last state before emergency stop
-volatile uint8_t last_left_motor_speed = 0;
-volatile uint8_t last_right_motor_speed = 0;
-volatile float last_distance2 = 0;
-volatile uint8_t was_following_line = 0;
-volatile uint8_t last_cool_2 = 0;
-volatile uint8_t last_cool_1 = 0;
-
+volatile uint16_t ultrason_obstacle_flag = 0;
+volatile uint16_t ir_left_detected_flag = 0;
+volatile uint16_t ir_right_detected_flag = 0;
+volatile uint16_t path_exit_flag = 0;
+// Initialize system
 void init(void) {
     // Initialize peripherals
     initm();
@@ -33,20 +24,6 @@ void init(void) {
     init_ultrasonics();
     init_timer_buzzer();
 
-    // Set PD0 and PD2 as inputs and enable internal pull-up resistors
-    DDRD &= ~(1 << PD0); // PD0 as input
-    PORTD |= (1 << PD0); // Enable pull-up resistor on PD0
-    DDRD &= ~(1 << PD2); // PD2 as input
-    PORTD |= (1 << PD2); // Enable pull-up resistor on PD2
-
-    // Initialize External Interrupt for emergency stop (INT0) on PD0
-    EICRA |= (1 << ISC01) | (1 << ISC00); // Rising edge on INT0
-    EIMSK |= (1 << INT0);  // Enable INT0
-
-    // Initialize External Interrupt for reset button (INT2) on PD2
-    EICRA |= (1 << ISC21) | (1 << ISC20); // Rising edge on INT2
-    EIMSK |= (1 << INT2);  // Enable INT2
-
     // Initialize Timer0 for ultrasonic delay and cool-down
     TCCR0A = (1 << WGM01); // CTC mode
     TCCR0B = (1 << CS02) | (1 << CS00); // Prescaler 1024
@@ -54,213 +31,115 @@ void init(void) {
     TIMSK0 |= (1 << OCIE0A); // Enable Timer0 compare match A interrupt
 
     sei(); // Enable global interrupts
-
     init_buzzer(); // Initialize the buzzer
     buzzer_uit();  // Ensure the buzzer is off
-}
-
-// Emergency stop interrupt service routine
-ISR(INT0_vect) {
-    if ((PIND & (1 << PD0)) == 0) { // Check if the button is pressed (falling edge)
-        emergency_stop_flag = 1;
-
-        // Save the current state
-        last_left_motor_speed = OCR2A;
-        last_right_motor_speed = OCR2B;
-        was_following_line = 1;
-        last_cool_1 = cool_down_flag;
-        last_cool_2 = cool_down_flag2;
-    } else { // Button is released (rising edge)
-        emergency_stop_flag = 0;
-    }
-}
-
-// Reset button interrupt service routine
-ISR(INT2_vect) {
-    if ((PIND & (1 << PD2)) == 0) { // Check if the button is pressed (falling edge)
-        reset_system();
-    }
-}
-
-void reset_system(void) {
-    // Reset all flags and variables to their initial state
-    emergency_stop_flag = 0;
-    ultrasonic_detected_flag = 0;
-    ultrasonic_detected_flag2 = 0;
-    cool_down_flag = 0;
-    cool_down_flag2 = 0;
-    cool_down_counter = 0;
-    obstacle_detected_flag = 0;
-    last_left_motor_speed = 0;
-    last_right_motor_speed = 0;
-    last_distance2 = 0;
-    was_following_line = 0;
-    last_cool_1 = 0;
-    last_cool_2 = 0;
-    stop_timer0();
-
-    // Stop the AGV and turn off the buzzer
-    agv_stoppen();
-    buzzer_uit();
 }
 
 // Timer0 compare match interrupt service routine
 ISR(TIMER0_COMPA_vect) {
     static uint8_t tick_count = 0;
-    static uint8_t cool_down_count = 0;
 
-    if (ultrasonic_detected_flag) {
+    if (boom_detected_flag) {
         tick_count++;
-        if (tick_count % 25 == 0) { // Toggle buzzer every 500ms
+
+        if (tick_count % 75 == 0) { // Toggle buzzer every 500ms
             buzzer_toggle();
-            agv_stoppen();
         }
+
         if (tick_count >= 150) { // 3 seconds
-            ultrasonic_detected_flag = 0;
+            boom_detected_flag = 0;
             cool_down_flag = 1;
-            cool_down_flag2 = last_cool_2;
             tick_count = 0;
             buzzer_uit();
-            was_following_line = 1;
         }
     }
 
     if (cool_down_flag) {
-        cool_down_count++;
-        if (cool_down_count >= 150) { // Cool-down period of 3 seconds
+        cool_down_counter++;
+        if (cool_down_counter >= 75) { // Cool-down period of 3 seconds
             cool_down_flag = 0;
-            cool_down_count = 0;
-            if (was_following_line) {
-                set_motor_speed(1, last_left_motor_speed);
-                set_motor_speed(2, last_right_motor_speed);
-                was_following_line = 0; // Reset the flag
-            }
-        }
-    }
-
-    if (ultrasonic_detected_flag2) {
-        tick_count++;
-        if (tick_count % 25 == 0) { // Toggle buzzer every 500ms
-            buzzer_toggle();
-            agv_stoppen();
-        }
-        if (tick_count >= 150) { // 3 seconds
-            ultrasonic_detected_flag2 = 0;
-            cool_down_flag2 = 1;
-            cool_down_flag = last_cool_1;
-            tick_count = 0;
-            buzzer_uit();
-            was_following_line = 1;
-        }
-    }
-
-    if (cool_down_flag2) {
-        cool_down_count++;
-        if (cool_down_count >= 150) { // Cool-down period of 3 seconds
-            cool_down_flag2 = 0;
-            cool_down_count = 0;
-            if (was_following_line) {
-                set_motor_speed(1, last_left_motor_speed);
-                set_motor_speed(2, last_right_motor_speed);
-                was_following_line = 0; // Reset the flag
-            }
+            cool_down_counter = 0;
+            disable_timer0();
         }
     }
 }
+void disable_timer0() {
+    // Clear the Clock Select bits to stop the timer
+    TCCR0B &= ~((1 << CS02) | (1 << CS01) | (1 << CS00));
 
-void start_timer0() {
-    TCNT0 = 0; // Reset Timer0 counter
-    TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0 with prescaler 1024
+    // Disable Timer0 interrupts
+   TIMSK0 &= ~((1 << TOIE0) | (1 << OCIE0A) | (1 << OCIE0B));
 }
-
-// Stop Timer0 function
-void stop_timer0() {
-    TCCR0B &= ~((1 << CS02) | (1 << CS00)); // Stop Timer0
-}
-
 int main(void) {
     init();
-    uint16_t distance1, distance2, distance3, distance4;
-
-    // PID configuration
-    PIDController lat_pid;
-    PIDController_Init(&lat_pid, 2.0f, 0.1f, 0.01f, -255.0f, 255.0f);
-    lat_pid.setpoint = 10.0f; // Desired lateral distance in cm
+    uint16_t distance1, distance2, distance3;
 
     while (1) {
         distance1 = measure_distance1();
         distance2 = measure_distance2();
         distance3 = measure_distance3();
-        distance4 = measure_distance4();
+        // IR Sensor readings and path correction
+        ir_left_detected_flag = read_ir_left(); // Function to read left IR sensor
+        ir_right_detected_flag = read_ir_right(); // Function to read right IR sensor
 
-        if (emergency_stop_flag) {
-            agv_stoppen();
-            buzzer_aan(); // Turn on the buzzer to indicate emergency stop
-            continue; // Skip the rest of the loop until emergency stop is released
-        } else {
-            buzzer_uit(); // Ensure the buzzer is off when emergency stop is released
-
-            // Restore the previous state if the AGV was following the line
-            if (was_following_line) {
-                set_motor_speed(1, last_left_motor_speed);
-                set_motor_speed(2, last_right_motor_speed);
-                was_following_line = 0; // Reset the flag
-                distance2 = last_distance2;
-                cool_down_flag = last_cool_1;
-                cool_down_flag2 = last_cool_2;
+        // Handle obstacle detected by distance1 sensor
+        if (distance1 < 15 && !cool_down_flag) {
+            if (!boom_detected_flag) {
+                agv_stoppen();
+                boom_detected_flag = 1;
+                TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0
             }
         }
 
-        if (distance1 < 15 && !cool_down_flag) {
-            agv_stoppen();
-            ultrasonic_detected_flag = 1;
-            last_cool_2 = cool_down_flag2;
-            start_timer0(); // Start Timer0
+         // Handle obstacle detected by distance1 sensor
+        if (distance2 < 15 && !cool_down_flag) {
+            if (!boom_detected_flag) {
+                agv_stoppen();
+                boom_detected_flag = 1;
+                TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0
+            }
         }
-        if (distance4 < 15 && !cool_down_flag2) {
-            last_cool_1 = cool_down_flag;
-            agv_stoppen();
-            ultrasonic_detected_flag2 = 1;
-            start_timer0(); // Start Timer0
+        // Handle obstacle detected by distance3 sensor
+        if(!(distance3 < 15))
+        {
+            ultrason_obstacle_flag = 0;
         }
-
         if (distance3 < 15) {
-            set_motor_speed(1, 0);
-            set_motor_speed(2, 0);
+            agv_stoppen();
             buzzer_uit();
-        } else {
-            // PID control for lateral distance
-            float correction = PIDController_Update(&lat_pid, (float)distance2);
-
-            // Calculate motor speeds based on correction
-            int16_t base_speed = 180;
-            int16_t left_motor_speed = base_speed - (int16_t)correction;
-            int16_t right_motor_speed = base_speed + (int16_t)correction;
-
-            // Constrain motor speeds to valid range
-            if (left_motor_speed < 0) left_motor_speed = 0;
-            if (left_motor_speed > 200) left_motor_speed = 200;
-            if (right_motor_speed < 0) right_motor_speed = 0;
-            if (right_motor_speed > 200) right_motor_speed = 200;
-
-            // Set motor speeds
-            set_motor_speed(1, (uint8_t)left_motor_speed);
-            set_motor_speed(2, (uint8_t)right_motor_speed);
-
-            buzzer_uit();
+            ultrason_obstacle_flag = 1;
         }
 
+        // Warning signal for close obstacles detected by distance3
         if (distance3 < 30 && distance3 > 15) {
-            for (int i = 0; i < 2; i++) {
-                if (TIFR4 & (1 << TOV4)) {
-                    TCNT4 = TCNT_INIT;
-                    TIFR4 = (1 << TOV4);
-                    buzzer_toggle();
-                    _delay_ms(100);
+            if (!boom_detected_flag && !cool_down_flag) {
+                for (int i = 0; i < 2; i++) {
+                    if (TIFR4 & (1 << TOV4)) {
+                        TCNT4 = TCNT_INIT;
+                        TIFR4 = (1 << TOV4);
+                        buzzer_toggle();
+                        _delay_ms(100);
+                    }
                 }
             }
         }
-    }
 
+
+
+        if (ir_left_detected_flag && ir_right_detected_flag && !boom_detected_flag && !ultrason_obstacle_flag) {
+            agv_rechtdoor();
+            path_exit_flag = 0; // Reset path exit flag if both sensors detect the wall
+        } else if (!ir_left_detected_flag && ir_right_detected_flag && !boom_detected_flag && !ultrason_obstacle_flag) {
+            agv_links_correctie(); // Correct to the left if right sensor sees the wall but left does not
+        } else if (ir_left_detected_flag && !ir_right_detected_flag && !boom_detected_flag && !ultrason_obstacle_flag) {
+            agv_rechts_correctie(); // Correct to the right if left sensor sees the wall but right does not
+        } else {
+            if (!path_exit_flag && !boom_detected_flag && !ultrason_obstacle_flag) {
+                agv_stoppen();
+                _delay_ms(1000); // Brief stop before turning
+                path_exit_flag = 1; // Set flag to indicate AGV has exited the path
+            }
+    }
+    }
     return 0;
 }

@@ -32,14 +32,14 @@ void agv_stoppen(void)
 
 void agv_rechts_correctie(void)
 {
-    set_motor_speed(1, 255);
-    set_motor_speed(2, 230);
+    set_motor_speed(1, 220);
+    set_motor_speed(2, 200);
     _delay_ms(100);
 }
 
 void agv_links_correctie(void) {
-    set_motor_speed(1, 230);
-    set_motor_speed(2, 255);
+    set_motor_speed(1, 220);
+    set_motor_speed(2, 200);
     _delay_ms(100);
 }
 
@@ -84,11 +84,7 @@ void set_motor_direction(uint8_t motor, uint8_t direction)
             PORTL |= (1 << IN1);
             PORTL &= ~(1 << IN2);
         }
-        else
-        {
-            PORTL &= ~(1 << IN1);
-            PORTL |= (1 << IN2);
-        }
+
     }
     else if (motor == 2)
     {
@@ -96,11 +92,6 @@ void set_motor_direction(uint8_t motor, uint8_t direction)
         {
             PORTB |= (1 << IN3);
             PORTB &= ~(1 << IN4);
-        }
-        else
-        {
-            PORTB &= ~(1 << IN3);
-            PORTB |= (1 << IN4);
         }
     }
 }

@@ -18,11 +18,11 @@ void init_ultrasonics(void) {
     DDRH |= (1 << US3_TRIG_PIN);  // Set trigger pin as output
     DDRH &= ~(1 << US3_ECHO_PIN); // Set echo pin as input
     PORTH &= ~(1 << US3_TRIG_PIN);
-
+/*
        // Sensor 4
     DDRD |= (1 << US4_TRIG_PIN);  // Set trigger pin as output
     DDRD &= ~(1 << US4_ECHO_PIN); // Set echo pin as input
-    PORTD &= ~(1 << US4_TRIG_PIN);
+    PORTD &= ~(1 << US4_TRIG_PIN);*/
 }
 
 // Measure distance with sensor 1
@@ -129,7 +129,7 @@ float measure_distance3(void) {
 
     return distance;
 }
-
+/*
 // Measure distance with sensor 3
 float measure_distance4(void) {
     uint16_t duration;
@@ -164,3 +164,4 @@ float measure_distance4(void) {
 
     return distance;
 }
+*/

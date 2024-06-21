@@ -24,7 +24,7 @@ void init_ultrasonics(void);
 float measure_distance1(void);
 float measure_distance2(void);
 float measure_distance3(void);
-float measure_distance4(void);
+/*float measure_distance4(void);*/
 
 #endif // ULTRASONETEST_H_INCLUDED
 
