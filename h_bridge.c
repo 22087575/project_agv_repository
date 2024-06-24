@@ -32,13 +32,13 @@ void agv_stoppen(void)
 
 void agv_rechts_correctie(void)
 {
-    set_motor_speed(1, 220);
-    set_motor_speed(2, 200);
+    set_motor_speed(1, 200);
+    set_motor_speed(2, 240);
     _delay_ms(100);
 }
 
 void agv_links_correctie(void) {
-    set_motor_speed(1, 220);
+    set_motor_speed(1, 240);
     set_motor_speed(2, 200);
     _delay_ms(100);
 }
