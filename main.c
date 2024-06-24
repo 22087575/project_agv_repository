@@ -53,13 +53,12 @@ ISR(TIMER0_COMPA_vect) {
             cool_down_flag = 1;
             tick_count = 0;
             buzzer_uit();
-            agv_can_go = 1;
         }
     }
 
     if (cool_down_flag) {
         cool_down_counter++;
-        if (cool_down_counter >= 150) { // Cool-down period of 1.5 seconds
+        if (cool_down_counter >= 75) { // Cool-down period of 1.5 seconds
             cool_down_flag = 0;
             cool_down_counter = 0;
             disable_timer0();
@@ -73,7 +72,7 @@ void disable_timer0() {
     TCCR0B &= ~((1 << CS02) | (1 << CS01) | (1 << CS00));
 
     // Disable Timer0 interrupts
-    TIMSK0 &= ~((1 << OCIE0A));
+    //TIMSK0 &= ~((1 << OCIE0A));
 }
 
 int main(void) {
@@ -89,12 +88,12 @@ int main(void) {
         ir_right_detected_flag = read_ir_right(); // Function to read right IR sensor
 
         // Handle obstacle detected by distance1 or distance2 sensor
-        if ((distance1 < 10 || distance2 < 10) && !cool_down_flag && !boom_detected_flag) {
+        if ((distance1 < 15 || distance2 < 15) && !cool_down_flag && !boom_detected_flag) {
             agv_stoppen();
             agv_can_go = 0;
             boom_detected_flag = 1;
             TCCR0B |= (1 << CS02) | (1 << CS00); // Start Timer0
-            TIMSK0 |= ((1 << OCIE0A));
+            //TIMSK0 |= ((1 << OCIE0A));
         }
 
         // Handle obstacle detected by distance3 sensor

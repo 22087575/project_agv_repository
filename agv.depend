@@ -149,3 +149,56 @@
 	<util/delay.h>
 	<stdint.h>
 
+1719218136 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\fuse.c
+	<avr/io.h>
+
+1719218136 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\buzzer.c
+	<avr/io.h>
+	"buzzer.h"
+
+1719218136 c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\buzzer.h
+	<avr/io.h>
+
+1719222058 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\h_bridge.c
+	<avr/io.h>
+	<util/delay.h>
+	"h_bridge.h"
+
+1719218136 c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\h_bridge.h
+
+1719218136 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\infrared.c
+	<avr/io.h>
+	"infrared.h"
+
+1719218136 c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\infrared.h
+	<avr/io.h>
+
+1719222069 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\main.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+	"h_bridge.h"
+	"buzzer.h"
+	"ultrasone.h"
+	"infrared.h"
+	"PID.h"
+
+1719218136 c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\ultrasone.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	<inttypes.h>
+	<util/delay.h>
+	<stdint.h>
+
+1719218136 c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\pid.h
+	<avr/io.h>
+
+1719218136 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\pid.c
+	<avr/io.h>
+	"PID.h"
+
+1719218136 source:c:\users\isaod\onedrive\desktop\mechatronica\blok4\project_agv_repository\ultrasone.c
+	"ultrasone.h"
+	<avr/io.h>
+	<util/delay.h>
+
