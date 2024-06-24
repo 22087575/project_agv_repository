@@ -12,14 +12,14 @@ void agv_rechtdoor(void)
 void agv_rechts_bocht(void)
 {
     set_motor_speed(1, 200);
-    set_motor_speed(2, 100);
+    set_motor_speed(2, 150);
     _delay_ms(100);
 }
 
 void agv_links_bocht(void)
 {
-    set_motor_speed(1, 0);
-    set_motor_speed(2, 255);
+    set_motor_speed(1, 150);
+    set_motor_speed(2, 200);
     _delay_ms(100);
 }
 
@@ -32,14 +32,14 @@ void agv_stoppen(void)
 
 void agv_rechts_correctie(void)
 {
-    set_motor_speed(1, 150);
-    set_motor_speed(2, 200);
+    set_motor_speed(1, 160);
+    set_motor_speed(2, 180);
     _delay_ms(100);
 }
 
 void agv_links_correctie(void) {
-    set_motor_speed(1, 200);
-    set_motor_speed(2, 150);
+    set_motor_speed(1, 180);
+    set_motor_speed(2, 160);
     _delay_ms(100);
 }
 
