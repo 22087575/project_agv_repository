@@ -141,10 +141,15 @@ int main(void) {
                     _delay_ms(100);
                 } else if (!ir_left_detected_flag && !ir_right_detected_flag && !boom_detected_flag && !ultrason_obstacle_flag && agv_can_go && button_already_pressed) {
                     if (!path_exit_flag) {
-                        _delay_ms(2000);
+                        _delay_ms(1250);
                         agv_links_bocht();
                         path_exit_flag = 1; // Set flag to indicate AGV has exited the path
-                        _delay_ms(100);
+
+                        if((ir_left_detected_flag || ir_right_detected_flag) && path_exit_flag)
+                        {
+                            path_exit_flag = 0;
+                            break;
+                        }
                     }
                 }
 
